@@ -11,16 +11,14 @@ export default function Header() {
     const imageUrl = null;
 
     const handleLogout = () => {
-        apiClient.post(`/api/Auth/RemoveUserSession?userName=${user?.userDetails?.userName}`)
+        apiClient.post(`/api/auth/logout`)
         .then((response) => {
             LocalStorage.remove('user'); 
             LocalStorage.remove('token')// Remove the user from localStorage
             window.location.href = "/login";
         })
         .catch((error) => {
-            LocalStorage.remove('user'); 
-            LocalStorage.remove('token')// Remove the user from localStorage
-            window.location.href = "/login";
+        console.error("Logout failed:", error);
         })
       
     };
@@ -30,7 +28,7 @@ export default function Header() {
             {/* Left Section */}
             <div className="flex flex-row justify-between items-center">
                 <img src={Logo} alt="Logo" className="w-[38%]" />
-                <h1 className="text-[#1A1A1A] font-bold text-[1.3rem] mt-3">BVN Mapping Portal</h1>
+
             </div>
 
             {/* Right Section */}
