@@ -57,9 +57,9 @@ export default function Header() {
                 {/* User Info */}
                 <div className="ml-3">
                     <h1 className="text-[#1A1A1A] font-bold text-[1rem]">
-                        {user?.userDetails?.firstName} {user?.userDetails?.lastName}
+                        {user?.name}
                     </h1>
-                    <p className="text-[#6C757D] text-[0.9rem]">{user?.userDetails?.roleName}</p>
+                    <p className="text-[#6C757D] text-[0.9rem]">{user?.role}</p>
                 </div>
 
                 {/* Dropdown Toggle */}

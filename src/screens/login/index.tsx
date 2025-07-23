@@ -137,7 +137,7 @@ export default function Login() {
 
                 <motion.div 
                     variants={itemVariants}
-                    className="flex justify-between items-center my-6"
+                    className="flex justify-between items-center my-6 min-h-10"
                 >
                     <label className="flex items-center cursor-pointer">
                         <input

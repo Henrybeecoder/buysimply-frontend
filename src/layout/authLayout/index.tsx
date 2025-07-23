@@ -23,7 +23,7 @@ export default function AuthLayout({ children }: AuthLayoutProps) {
           </p>
         </div>
       </div>
-      <div className="bg-white lg:w-[50%] w-full h-full lg:px-8 px-4 flex flex-col items-center justify-center">
+      <div className="bg-white lg:w-[50%] w-full h-full lg:px-8 px-10 flex flex-col items-center justify-center">
         <div className="lg:w-[90%] w-full">
           {children}
         </div>
