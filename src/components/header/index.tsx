@@ -13,6 +13,7 @@ export default function Header() {
     const handleLogout = () => {
         apiClient.post(`/api/auth/logout`)
         .then((response) => {
+            console.log(response, "Logout successful");
             LocalStorage.remove('user'); 
             LocalStorage.remove('token')// Remove the user from localStorage
             window.location.href = "/login";

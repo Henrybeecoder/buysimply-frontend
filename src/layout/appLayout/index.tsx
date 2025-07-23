@@ -1,5 +1,9 @@
 import Header from "../../components/header"
-export default function AppLayout({children}) {
+import type { ReactNode } from "react";
+interface AppLayoutProps {
+  children: ReactNode;
+}
+export default function AppLayout({children}: AppLayoutProps) {
     return (
         <div>
            <Header />
